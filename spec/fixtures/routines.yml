@@ -1,0 +1,7 @@
+routine_one:
+  name: 'Routine One'
+  exercises: exercise_one, exercise_two
+
+routine_two:
+  name: 'Routine Two'
+  exercises: exercise_one, exercise_two

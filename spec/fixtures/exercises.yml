@@ -1,0 +1,7 @@
+exercise_one:
+  description: 'Abdominal'
+  intensity: '4'
+
+exercise_two:
+  description: 'Flexão'
+  intensity: '7'
