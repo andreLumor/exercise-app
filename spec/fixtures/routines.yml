@@ -1,0 +1,7 @@
+routine_one:
+  id: 1
+  name: 'Routine One'
+
+routine_two:
+  id: 2
+  name: 'Routine Two'

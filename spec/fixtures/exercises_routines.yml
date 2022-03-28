@@ -1,0 +1,15 @@
+exercise_routine_one:
+  exercise_id: 1
+  routine_id: 1
+
+exercise_routine_two:
+  exercise_id: 2
+  routine_id: 1
+
+exercise_routine_three:
+  exercise_id: 1
+  routine_id: 2
+
+exercise_routine_four:
+  exercise_id: 2
+  routine_id: 2

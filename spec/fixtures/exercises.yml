@@ -1,0 +1,9 @@
+exercise_one:
+  id: 1
+  description: 'Abdominal'
+  intensity: '4'
+
+exercise_two:
+  id: 2
+  description: 'Flexão'
+  intensity: '7'
