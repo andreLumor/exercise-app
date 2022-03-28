@@ -7,5 +7,6 @@ RSpec.describe Routine, type: :model do
 
   context 'validations' do
     it { should validate_presence_of(:name) }
+    it { should validate_presence_of(:exercises) }
   end
 end

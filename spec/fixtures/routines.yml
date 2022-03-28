@@ -1,7 +1,7 @@
 routine_one:
-  id: 1
   name: 'Routine One'
+  exercises: exercise_one, exercise_two
 
 routine_two:
-  id: 2
   name: 'Routine Two'
+  exercises: exercise_one, exercise_two
