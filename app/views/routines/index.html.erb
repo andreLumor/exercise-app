@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+<% unless user_signed_in?  %>
+  <%= button_to "Log in", new_user_session_path, method: :get %>
+<% else %>
+  <%= button_to "Log out", destroy_user_session_path, method: :delete %>
+<% end %>
+<%= button_to "New Routine", new_routine_path, method: :get %>
+<%= button_to "New Exercise", new_exercise_path, method: :get %>
+
+<h1>Routines</h1>
+
+<div id="routines">
+  <% @routines.each do |routine| %>
+    <%= render routine %>
+  <% end %>
+</div>
+
