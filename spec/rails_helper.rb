@@ -61,6 +61,7 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  config.include Warden::Test::Helpers
 end
 
 Shoulda::Matchers.configure do |config|
@@ -68,4 +69,9 @@ Shoulda::Matchers.configure do |config|
     with.test_framework :minitest
     with.library :rails
   end
+end
+
+RSpec.configure do |config|
+  config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include Devise::Test::ControllerHelpers, type: :view
 end
