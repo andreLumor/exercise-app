@@ -1,4 +1,5 @@
 class RoutinesController < ApplicationController
+  before_action :check_token, except: [:index]
   before_action :authenticate_user!, except: [:index]
   helper_method :exercises
   

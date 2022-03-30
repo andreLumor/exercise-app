@@ -7,4 +7,16 @@ class User < ApplicationRecord
 
   validates :email, presence: true, uniqueness: true
   validates :encrypted_password, presence: true
+
+  def generate_jwt
+    self.update_column(:jwt_key, JWT.encode({id: id, timestamp: Time.now}, ENV['SECRET_KEY']))
+  end
+
+  def delete_jwt
+    self.update_column(:jwt_key, '')
+  end
+
+  after_save do
+    generate_jwt
+  end
 end
