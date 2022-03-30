@@ -1,5 +1,7 @@
 class ExercisesController < ApplicationController
+  before_action :check_token
   before_action :authenticate_user! 
+
   # GET /exercises/new
   def new
     @exercise = Exercise.new
