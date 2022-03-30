@@ -8,7 +8,6 @@ RSpec.describe "exercises/new", type: :view do
   it "renders new exercise form" do
     render
 
-    assert_select "form[action=?][method=?]", exercises_path, "post" do
-    end
+    assert_select "form[action=?][method=?]", exercises_path, "post"
   end
 end

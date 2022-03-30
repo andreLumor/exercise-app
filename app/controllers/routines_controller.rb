@@ -1,6 +1,7 @@
 class RoutinesController < ApplicationController
   before_action :authenticate_user!, except: [:index]
-
+  helper_method :exercises
+  
   # GET /routines or /routines.json
   def index
     @routines = Routine.all
@@ -8,7 +9,7 @@ class RoutinesController < ApplicationController
 
   # GET /routines/new
   def new
-    @exercises = Exercise.all 
+    @exercises = Exercise.all
     @routine = Routine.new
   end
 
@@ -36,5 +37,10 @@ class RoutinesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def routine_params
       params.require(:routine).permit(:name, exercise_ids: [])
+    end
+
+    # Exercises helper, so i can use it after rendering partial
+    def exercises
+      @exercises = Exercise.all 
     end
 end
