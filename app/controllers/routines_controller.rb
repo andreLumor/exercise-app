@@ -1,5 +1,6 @@
 class RoutinesController < ApplicationController
   before_action :authenticate_user!, except: [:index]
+  before_action :check_token, except: [:index]
   helper_method :exercises
   
   # GET /routines or /routines.json
