@@ -1,0 +1,18 @@
+<%= form_with(model: @routine) do |form| %>
+  <% if @routine.errors.any? %>
+    <%= render "errors", routine: @routine  %>
+  <% end %>
+  <div>
+    <%= form.label :name%>
+    <%= form.text_field :name %>
+  </div> 
+  
+  <% for exercise in exercises %>
+    <%= check_box_tag "routine[exercise_ids][]", exercise.id %>
+    <%= exercise.description %>
+  <% end %>
+
+  <div>
+    <%= form.submit%>
+  </div>
+<% end %>

@@ -1,0 +1,11 @@
+<div id="<%= dom_id routine %>">
+
+<h2><%= routine.name %></h2>
+<h3>Exercises:</h3>
+<tr>
+  <% routine.exercises.each do |exercise| %>
+    <td><%= exercise.description %></td>
+    <td>(Intensity: <%= exercise.intensity %>)</td>
+    <br>
+  <% end %>
+</tr>
