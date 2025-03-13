@@ -3,6 +3,7 @@ class Exercise < ApplicationRecord
 
   validates :description, presence: true
   validates :intensity, presence: true
+  #second change
 
   validates_numericality_of :intensity, greater_than_or_equal_to: 0, less_than_or_equal_to: 10
 end
