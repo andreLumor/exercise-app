@@ -3,4 +3,5 @@ class Routine < ApplicationRecord
 
   validates :exercises, presence: true
   validates :name, presence: true
+  #second change to the models
 end
