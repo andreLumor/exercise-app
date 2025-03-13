@@ -5,4 +5,7 @@ class Exercise < ApplicationRecord
   validates :intensity, presence: true
 
   validates_numericality_of :intensity, greater_than_or_equal_to: 0, less_than_or_equal_to: 10
+  #fist change to the models
+  # Change to the first PR
+  # second change
 end
